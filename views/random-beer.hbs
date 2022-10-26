@@ -1,0 +1,41 @@
+
+<section id="article-random">
+    {{#if dataBeerRandom.image_url}}
+    <img src=" {{dataBeerRandom.image_url}} " alt="image of {{dataBeerRandom.name}}">
+  {{/if}}
+
+  {{#unless dataBeerRandom.image_url}}
+    <img src="/images/beer.png" alt="beer image">
+  {{/unless}}
+    
+    <article>
+        <h1>{{dataBeerRandom.name}}</h1>
+        <p class="beer-hashtag"># {{dataBeerRandom.tagline}}</p>
+        <p id="random-description">{{dataBeerRandom.description}}</p>
+        <h2>Food Pairing</h2>
+        <ul>
+            {{#each dataBeerRandom.food_pairing}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </article>
+</section>
+
+
+{{!-- Version 2:
+{{#each dataBeerRandom}}
+<section id="article-random">
+    <img src=" {{this.image_url}} " alt="image of {{this.name}}">
+    <article>
+        <h1>{{this.name}}</h1>
+        <p class="beer-hashtag"># {{this.tagline}}</p>
+        <p id="random-description">{{this.description}}</p>
+        <h2>Food Pairing</h2>
+        <ul>
+            {{#each this.food_pairing}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </article>
+</section>
+{{/each}} --}}
