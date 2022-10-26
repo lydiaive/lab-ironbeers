@@ -1,21 +1,28 @@
 <section id="article-random">
-    {{#if this.image_url}}
-    <img src=" {{this.image_url}} " alt="image of {{this.name}}">
-  {{/if}}
+    <div>
+        {{#if this.image_url}}
+        <img class="img-size-big" src=" {{this.image_url}} " alt="image of {{this.name}}">
+        {{/if}}
 
-  {{#unless this.image_url}}
-    <img src="/images/beer.png" alt="beer image">
-  {{/unless}}
+        {{#unless this.image_url}}
+            <img class="img-size-big" src="/images/default.jpeg" alt="beer image">
+        {{/unless}}
+    </div>
     
     <article>
         <h1>{{this.name}}</h1>
         <p class="beer-hashtag"># {{this.tagline}}</p>
-        <p id="random-description">{{this.description}}</p>
+        <p>{{this.description}}</p>
         <h2>Food Pairing</h2>
         <ul>
             {{#each this.food_pairing}}
             <li>{{this}}</li>
             {{/each}}
         </ul>
+        <div>
+            <span class="h2-style">Brewers Tips: </span>
+            <span>{{this.brewers_tips}}</span>
+
+        </div>
     </article>
 </section>

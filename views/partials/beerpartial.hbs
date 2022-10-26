@@ -1,5 +1,13 @@
 <article class="beer-card">
-<a href="/beers/{{this.id}}"><img src="{{this.image_url}}" alt="image of {{this.name}}"></a>
+    <div class="img-container">
+        {{#if this.image_url}}
+        <a href="/beers/{{this.id}}"><img class="img-size-small" src="{{this.image_url}}" alt="image of {{this.name}}"></a>
+        {{/if}}
+
+        {{#unless this.image_url}}
+        <a href="/beers/{{this.id}}"><img class="img-size-small" src="/images/default.jpeg" alt="default beer image"></a>
+        {{/unless}}
+    </div>
 <h2>{{this.name}}</h2>
 <p class="beer-hashtag"># {{this.tagline}}</p>
 <p class="beer-card-description">{{this.description}}</p>
