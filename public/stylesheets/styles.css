@@ -5,3 +5,30 @@ dark-blue: #0a2c42;
 grey: #bfbfbf;
 font-family: Arial, Helvetica, sans-serif;
 */
+body {
+    font-size: 18px;
+    font-family: monospace;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    background-color: blue;
+    list-style: none;
+}
+
+#navbar a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.home-button {
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
