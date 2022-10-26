@@ -1,9 +1,4 @@
 
 {{#each data}}
-<article class="beer-card">
-<img src="{{this.image_url}}" alt="image of {{this.name}}">
-<h2>{{this.name}}</h2>
-<p class="beer-card-description">{{this.description}}</p>
-<pclass="beer-hashtag"># {{this.tagline}}</p>
-</article>
+    {{>beerpartial}}
 {{/each}}

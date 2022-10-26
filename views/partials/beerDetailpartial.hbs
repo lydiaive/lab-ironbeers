@@ -1,12 +1,12 @@
-{{#with dataBeerRandom}}
-    {{>beerDetailpartial}}
-{{/with }}
-
-
-{{!-- Version 2:
-{{#each dataBeerRandom}}
 <section id="article-random">
+    {{#if this.image_url}}
     <img src=" {{this.image_url}} " alt="image of {{this.name}}">
+  {{/if}}
+
+  {{#unless this.image_url}}
+    <img src="/images/beer.png" alt="beer image">
+  {{/unless}}
+    
     <article>
         <h1>{{this.name}}</h1>
         <p class="beer-hashtag"># {{this.tagline}}</p>
@@ -19,4 +19,3 @@
         </ul>
     </article>
 </section>
-{{/each}} --}}
